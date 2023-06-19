@@ -18,11 +18,11 @@ fileSelector.onchange = () => {
 
 // now start text recognition
 start.onclick = () => {
-    textarea.innerHTML = '';
     nimInput.value = '';
     namaInput.value = '';
     jurusanInput.value = '';
     const rec = new Tesseract.TesseractWorker();
+
     rec
         .recognize(fileSelector.files[0])
         .progress(function (response) {
@@ -31,10 +31,9 @@ start.onclick = () => {
         } else {
             progress.innerHTML = response.status;
         }
-        })
-        .then(function (data) {
-        textarea.innerHTML = data.text;
-        progress.innerHTML = 'Done';
+    })
+    .then(function (data) {
+        progress.innerHTML = 'Done.';
 
         // Extract NIM, nama, and jurusan from recognized text
         const recognizedText = data.text;
@@ -54,8 +53,8 @@ start.onclick = () => {
             const splitText = cleanedText.split('\n');
 
             if (splitText.length >= 2) {
-            namaInput.value = splitText[0];
-            jurusanInput.value = splitText[1];
+                namaInput.value = splitText[0];
+                jurusanInput.value = splitText[1];
             }
         }
     });
