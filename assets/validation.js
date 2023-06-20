@@ -3,8 +3,9 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
 
     // Memeriksa apakah semua field telah diisi
     if (validateForm()) {
-    showNotification('Berhasil mengirim formulir!');
-    document.getElementById('registerForm').reset(); // Mengosongkan formulir setelah pengiriman berhasil
+        showNotification('Berhasil mengirim formulir!');
+        // Mengosongkan formulir setelah pengiriman berhasil
+        document.getElementById('registerForm').reset();
     }
 });
 

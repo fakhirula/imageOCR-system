@@ -7,7 +7,7 @@ const nimInput = document.querySelector('#nim');
 const namaInput = document.querySelector('#nama');
 const jurusanInput = document.querySelector('#jurusan');
 
-// first show image on upload
+// Tampilkan gambar ketika upload
 fileSelector.onchange = () => {
     var file = fileSelector.files[0];
     var imgUrl = window.URL.createObjectURL(
@@ -16,7 +16,7 @@ fileSelector.onchange = () => {
     img.src = imgUrl;
 };
 
-// now start text recognition
+// Text recognition
 start.onclick = () => {
     nimInput.value = '';
     namaInput.value = '';
@@ -33,10 +33,10 @@ start.onclick = () => {
     .then(function (data) {
         progress.innerHTML = 'Done.';
 
-        // Extract NIM, nama, and jurusan from recognized text
+        // Extract NIM, nama, and jurusan dari hasil recognize
         const recognizedText = data.text;
-        const nimRegex = /0\d{9}/g; // Regex pattern for NIM starting with 0 and has 10 digits
-        const namaJurusanRegex = /^[A-Z\s]+$/gm; // Regex pattern for nama and jurusan in uppercase with whitespace only
+        const nimRegex = /0\d{9}/g; // Regex untuk NIM mulai dari 0 dan memiliki 10 digit
+        const namaJurusanRegex = /^[A-Z\s]+$/gm; // Regex untuk nama and jurusan dengan uppercase dan whitespace only
 
         const extractedNIM = recognizedText.match(nimRegex);
         const extractedNamaJurusan = recognizedText.match(namaJurusanRegex);
@@ -56,7 +56,4 @@ start.onclick = () => {
             }
         }
     });
-};
-
-
-    
+};    
