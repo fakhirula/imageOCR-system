@@ -4,91 +4,91 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>OCR - Quick Register</title>
+        <!-- Penambahan script CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
-        <!-- Section: Design Block -->
-        <section class="">
-        <!-- Jumbotron -->
-        <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-            <div class="container">
-            <div class="row gx-lg-5 align-items-center">
-                <h1 class="mb-5 display-3 fw-bold ls-tight">
-                    Quick register <span class="text-primary">with OCR</span>
-                </h1>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="d-flex mx-4">
-                        <input type="file" class="form-control">
-                        <button class="btn btn-primary">Start</button>
-                    </div>
-                    <div class="row mx-3 mt-2">
-                        <div class="col-2">
-                            <p>Status: </p>
+        <section>
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+                <div class="container">
+                <div class="row gx-lg-5 align-items-center">
+                    <h1 class="mb-5 display-3 fw-bold ls-tight">
+                        Quick register <span class="text-primary">with OCR</span>
+                    </h1>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="d-flex mx-4">
+                            <input type="file" class="form-control">
+                            <button class="btn btn-primary">Start</button>
                         </div>
-                        <div class="col-10">
-                            <div class="progress fs-6 px-2" style="height: 30px;"></div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 mx-2">
-                        <div class="col flex-grow-1">
-                            <div class="border border-secondary" style="height: 400px; margin: 10px;">
-                                <img src="" class="img-fluid" style="max-width: calc(100% - 20px); max-height: calc(100% - 20px); margin: 10px;">
+                        <div class="row mx-3 mt-2">
+                            <div class="col-2">
+                                <p>Status: </p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress fs-6 px-2" style="height: 30px;"></div>
                             </div>
                         </div>
-                        <p style="color: hsl(217, 10%, 50.8%)">
-                            Solusi cepat dan efisien untuk mendaftar. Dengan menggunakan teknologi OCR, Anda dapat mengunggah dokumen identitas Anda dan sistem akan otomatis membaca informasi yang diperlukan dalam proses pendaftaran.
-                        </p>
+                        <div class="row gx-3 mx-2">
+                            <div class="col flex-grow-1">
+                                <div class="border border-secondary" style="height: 400px; margin: 10px;">
+                                    <img src="" class="img-fluid" style="max-width: calc(100% - 20px); max-height: calc(100% - 20px); margin: 10px;">
+                                </div>
+                            </div>
+                            <p style="color: hsl(217, 10%, 50.8%)">
+                                Solusi cepat dan efisien untuk mendaftar. Dengan menggunakan teknologi OCR, Anda dapat mengunggah dokumen identitas Anda dan sistem akan otomatis membaca informasi yang diperlukan dalam proses pendaftaran.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="card">
-                    <div class="card-body py-5 px-md-5">
-                    <form>
-                        <div class="form-outline mb-4">
-                            <input type="text" id="nim" class="form-control" />
-                            <label class="form-label" for="nim">NIM</label>
-                        </div>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body py-5 px-md-5">
+                        <!-- Halaman form -->
+                        <form id="registerForm">
+                            <div class="form-outline mb-4">
+                                <input type="text" id="nim" class="form-control" />
+                                <label class="form-label" for="nim">NIM</label>
+                            </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="text" id="nama" class="form-control" />
-                            <label class="form-label" for="nama">Nama</label>
-                        </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="nama" class="form-control" />
+                                <label class="form-label" for="nama">Nama</label>
+                            </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="text" id="jurusan" class="form-control" />
-                            <label class="form-label" for="jurusan">Jurusan</label>
-                        </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="jurusan" class="form-control" />
+                                <label class="form-label" for="jurusan">Jurusan</label>
+                            </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="email" id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3">Email address</label>
-                        </div>
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" class="form-control" />
+                                <label class="form-label" for="email">Email address</label>
+                            </div>
 
-                        <div class="form-outline mb-4">
-                            <input type="password" id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4">Password</label>
-                        </div>
+                            <div class="form-outline mb-4">
+                                <input type="password" id="password" class="form-control" />
+                                <label class="form-label" for="password">Password</label>
+                            </div>
 
-                        <!-- Submit button -->
-                        <div class="form-outline mb-4">
-                            <button type="submit" class="btn btn-primary btn-block mb-4">
-                            Sign up
-                            </button>
+                            <!-- Submit button -->
+                            <div class="form-outline mb-4">
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                Sign up
+                                </button>
+                            </div>
+                        </form>
                         </div>
-                    </form>
+                    </div>
                     </div>
                 </div>
                 </div>
             </div>
-            </div>
-        </div>
-        <!-- Jumbotron -->
         </section>
-        <!-- Section: Design Block -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script src="assets/tesseract.min.js"></script>
-        <script src="assets/script.js"></script>
+        <script src="assets/ocr-system.js"></script>
+        <script src="assets/validation.js"></script>
     </body>
 </html>

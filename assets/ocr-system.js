@@ -23,9 +23,7 @@ start.onclick = () => {
     jurusanInput.value = '';
     const rec = new Tesseract.TesseractWorker();
 
-    rec
-        .recognize(fileSelector.files[0])
-        .progress(function (response) {
+    rec.recognize(fileSelector.files[0]).progress(function (response) {
         if (response.status == 'recognizing text') {
             progress.innerHTML = response.status + '   ' + response.progress;
         } else {
@@ -59,3 +57,6 @@ start.onclick = () => {
         }
     });
 };
+
+
+    
